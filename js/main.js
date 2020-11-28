@@ -48,27 +48,18 @@ const game = function(count = 10, reboot) {
                alert(`Загаданное число больше, осталось ${count} попыток`);
                return play();
             }
-      } else {
-         reboot = confirm('Попытки закончились. Хотите сыграть ещё?');
-         if (reboot == true) {
-            location.reload();
-            return;
-         } else if (reboot == false) {
-            return;
+         } else {
+            reboot = confirm('Попытки закончились. Хотите сыграть ещё?');
+            if (reboot == true) {
+               location.reload();
+               return;
+            } else if (reboot == false) {
+               return;
+            }
          }
       }
-      }
-
-      
-
-      
-
-      
-
       play();
-
    }
-
 }
 
 const startGame = game();
